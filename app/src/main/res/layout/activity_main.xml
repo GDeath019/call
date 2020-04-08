@@ -10,6 +10,7 @@
         android:id="@+id/SDT"
         android:hint="So Dien Thoai"
         android:textSize="30dp"
+        android:inputType="number"
         android:layout_width="379dp"
         android:layout_height="59dp"
         android:layout_marginStart="16dp"

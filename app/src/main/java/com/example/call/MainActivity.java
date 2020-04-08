@@ -22,17 +22,17 @@ public class MainActivity extends AppCompatActivity {
         sdt = (EditText)findViewById(R.id.SDT);
         btnCall = (Button)findViewById(R.id.BtnCall);
         btnTest = (Button)findViewById(R.id.BtnTest);
-        btnTest.setVisibility(View.INVISIBLE);
 
         btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String phoneNo = sdt.getText().toString();
                 if(!TextUtils.isEmpty(phoneNo)) {
-                    String dial = "tel:" + phoneNo;
-                    startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(dial)));
+                    String phoneNumber = "tel:" + phoneNo;
+                    startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(phoneNumber)));
                 }else {
                     Toast.makeText(MainActivity.this, "Enter a phone number", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
                 }
             }
         });
